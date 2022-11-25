@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(0.25turn, #919597, #ebf8e1, #8a4a4a);
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+a {
+  color: white
+}
+
+ul{
+  display: none !important;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  margin-left: 0.1rem
+}
+ul button{
+  margin-left: 5rem
+}
+.quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition:  2s ease-in-out;
+}
+.fetch{
+  display: flex;
+  flex-direction: row;
+}
+.fetch button {
+  margin: 1rem
+}
+.quote{
+  border: solid 1px black;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 5px 5px rgb(240, 157, 157);
+
+}
+
+form{
+  width: 100%;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 25px
+}
+.quote-author{
+  border: solid 1px black;
+  margin: 3rem auto;
+  padding: 1rem;
+  box-shadow: 1px 5px 5px rgb(240, 157, 157);
+  width: 50%;
+  display: block
+}
+form input {
+  width: 50% !important;
+
+}
+input::placeholder{
+  color: rgb(109, 101, 101) !important
+
+}
+.not-found{
+  margin: 5rem;
+  font-weight: bolder
+}
+
+
+@media(max-width: 648px){
+  ul button{
+    width: 100% !important;
+    margin: 0.15rem !important
+  }
+  ul {
+    margin-left: 10% !important
+  }
+}
