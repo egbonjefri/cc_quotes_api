@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
   res.type('txt').send('Thanks for your submission, page should reload shortly...');
      
     setTimeout(()=>{
-    res.render('404',{url: 'https://ccquotesapi.herokuapp.com'})
+    res.redirect(req.get('referer'))
   },1000)
 });
 
