@@ -1,8 +1,8 @@
 // Constants.js
 const production = {
-    url: 'https://cc-quotes-api.onrender.com/quotes'
+    url: 'https://quotes-cc-api.onrender.com/quotes'
   };
   const development = {
-    url: 'https://cc-quotes-api.onrender.com/quotes'
+    url: 'http://localhost:9000/quotes'
   };
   export const config = process.env.NODE_ENV === 'development' ? development : production;

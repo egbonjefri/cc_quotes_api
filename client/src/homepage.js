@@ -11,7 +11,7 @@ export default function Homepage(){
     useEffect(()=>{
       setTimeout(()=>{
         const loadQuotes = async () => {
-          await fetch(`https://cc-quotes-api.onrender.com/quotes`).then(
+          await fetch(`${URL}`).then(
             res=>
           res.json()).then(res=>{
             let x = [];
@@ -29,7 +29,7 @@ export default function Homepage(){
     useEffect(()=>{
         setTimeout(()=>{
             const fetchQuotes = async () => {
-              await fetch(`https://cc-quotes-api.onrender.com/quotes/quotes`).then(res => res.json()).then(res=> setArray(res))
+              await fetch(`${URL}/quotes`).then(res => res.json()).then(res=> setArray(res))
             }
             if(counter > 0){
             fetchQuotes()}
