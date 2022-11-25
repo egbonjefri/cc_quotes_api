@@ -15,7 +15,8 @@ export default function SearchAuthor(){
           const loadQuotes = async () => {
             await fetch(`${URL}/search?q=${search}`).then(res => res.json()).then(res=>{
            if(res.author !== ''){
-            setArray(res)
+            setArray(res);
+            setText([])
            }
            else {
              setText(res)
@@ -26,7 +27,7 @@ export default function SearchAuthor(){
           loadQuotes()}
         },200)
     // eslint-disable-next-line
-      },[count,search])
+      },[count])
 
     return(
         <div>
@@ -44,6 +45,7 @@ export default function SearchAuthor(){
     array.map((item)=>{
         return(
             <motion.div
+            key={Math.floor(Math.random()*array.length)}
             initial={{opacity:0, scale: 0.25}}
               animate={{opacity : 1, scale: 1 }}
               transition={{duration:1}}
